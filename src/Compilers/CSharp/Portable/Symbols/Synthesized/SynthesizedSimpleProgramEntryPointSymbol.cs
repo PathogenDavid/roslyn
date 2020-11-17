@@ -164,6 +164,8 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
             }
         }
 
+        public sealed override bool AreLocalsZeroed => ContainingType.AreLocalsZeroed;
+
         internal override int CalculateLocalSyntaxOffset(int localPosition, SyntaxTree localTree)
         {
             return localPosition;
